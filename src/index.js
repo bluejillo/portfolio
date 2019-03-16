@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './components/nav/Navigation.scss';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'semantic-ui-css/semantic.min.css'
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -1,0 +1,29 @@
+.toggle-burger {
+    height: 28px;
+    width: 35px;
+    background: transparent;
+    border: none;
+    margin: .6rem .5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    box-sizing: border-box;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &__line {
+        background: white;
+        height: 2px;
+        width: 35px;
+        // margin: 6px 0;
+
+
+    }
+}

@@ -1,0 +1,59 @@
+// color palette: https://colorpalettes.net/color-palette-540/
+
+.navigation {
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // background-color: #8bd1d3;
+    // padding: 1px;
+
+    &__nav {
+        display: flex;
+        height: 100%;
+        padding: 0 1rem;
+        align-items: center;
+
+        .hamburger-container {
+            background-color: #8bd1d3;
+            // padding: .5rem 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+        }
+        
+        .spacer {
+            flex: 1;
+        }
+        
+        .nav-links {
+            .nav-items {
+                text-decoration: none;
+                color: white;
+                font-weight: bold;
+            }
+            .nav-items:hover {
+                color: #96439d;
+            }
+            
+            ul {
+                padding: 0;
+                margin: 0;
+                display: flex;
+            }
+            li {
+                list-style: none;
+                padding: 0 .5rem;
+            }
+            
+            .active, .active:hover {
+                color:#390164;
+            }
+
+        }
+
+    }
+
+}
