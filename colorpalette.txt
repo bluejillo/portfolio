@@ -1,0 +1,5 @@
+Darker blue -------	#5680E9
+Greenish blue -----	#84CEEB
+Teal --------------	#5AB9EA
+Grey purple -------	#C1C8E4
+Purple-------------	#8860D0

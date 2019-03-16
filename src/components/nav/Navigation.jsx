@@ -9,7 +9,6 @@ const Navigation = (props) => {
     return (
         <header className = "navigation">
             <nav className = "navigation__nav">
-                <div className = "spacer" />
                 <div className="hamburger-container">
                     <SideDrawerToggleButton click={ props.toggle }/>
                 </div>
