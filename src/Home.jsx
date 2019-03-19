@@ -15,13 +15,14 @@ class Home extends Component {
     render () {
         return (
             <div className="home-main">
-                 <Grid>
+                 <Grid container>
                     <Grid.Row>
-                        <Grid.Column width={2}>
-                            
+                        <Grid.Column width={6} textAlign='bottom'>
+                            <h1 className='hero-text'>Hi, <br /> I'm Alyssa</h1>
+                            <p className='hero-text-smaller'>Full Stack Web Developer</p>
                         </Grid.Column>
-                        <Grid.Column width={14}>
-                            <Image src={ aplogo } size='large'/>
+                        <Grid.Column width={10}>
+                            <Image className='hero-logo' src={ aplogo } size='large'/>
                         </Grid.Column>
                     </Grid.Row>
                 </Grid>

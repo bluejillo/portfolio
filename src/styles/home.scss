@@ -1,6 +1,22 @@
 .home-main {
     padding-top: 80px;
-    padding-left: 1rem;
+    // padding-left: 6rem;
     font-family: 'Overpass', sans-serif;
     background-color: #5AB9EA; 
+    height: 100vh;
+
+    .hero-logo {
+        margin: auto;
+    }
+
+    .hero-text {
+        color: white;
+        font-weight: bold;
+        font-size: 5rem;
+    }
+
+    .hero-text-smaller {
+        color: white;
+        font-size: 2rem;
+    }
 }
