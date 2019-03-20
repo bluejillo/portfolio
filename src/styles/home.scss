@@ -1,6 +1,6 @@
 .home-main {
     padding-top: 80px;
-    // padding-left: 6rem;
+    padding-left: 6rem;
     font-family: 'Overpass', sans-serif;
     background-color: #5AB9EA; 
     height: 100vh;
@@ -18,5 +18,11 @@
     .hero-text-smaller {
         color: white;
         font-size: 2rem;
+    }
+
+    .ui.card{
+        width:200px !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
     }
 }
