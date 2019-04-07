@@ -5,10 +5,11 @@
   "dependencies": {
     "node-sass": "^4.11.0",
     "react": "^16.8.4",
+    "react-card-flip": "^0.6.0",
     "react-d3-donut": "^1.1.2",
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.6",
+    "react-scripts": "^2.1.8",
     "react-transition-group": "^1.2.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.86.0"

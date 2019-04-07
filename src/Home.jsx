@@ -14,50 +14,29 @@ class Home extends Component {
                 skillTitle: 'React',
                 donutData: [ {count: 220, color: '#DFDFDF'}, {count: 140, color: '#3CDB46'}],
                 showDescription: false,
-                skillDescription: "I know some React."
+                skillDescription: "I have 1 year experience using React and continuing to advance my skills."
             },
             {
                 id: 1,
                 skillTitle: 'HTML5',
                 donutData: [{count: 140, color: '#DFDFDF'}, {count: 220, color: '#3CDB46'}],
                 showDescription: false,
-                skillDescription: 'Im real good at HTML'
+                skillDescription: 'I have 6+ years experience with HTML5. Experienced in creating/maintaining HTML web pages and emails.'
             },
         ]
-    }
-
-    handleSkillDescriptionClick = (event, id) => {
-        console.log(id)
-        const skillIndex = this.state.skills.findIndex(s => {
-            return s.id === id
-        })
-        const skill = {
-            ...this.state.skills[skillIndex]
-        }
-        skill.showDescription = !skill.showDescription
-        const skills = [ ...this.state.skills]
-        skills[skillIndex] = skill
-
-        this.setState({skills: skills})
-
-        
     }
 
     render () {
         let skillCards = null;
         if(this.state.skills){
                skillCards = this.state.skills.map((skill, index) => 
-                    <Card>
                         <SkillCard key={ `skill-${index}` } 
                         id={ skill.id }
                         skill={ skill.skillTitle }
                         donutData={ skill.donutData }
                         pieID={ `pie${index}` }
                         description={skill.skillDescription}
-                        descriptionToggle={skill.showDescription}
-                        descriptionClick={this.handleSkillDescriptionClick.bind(this, skill.id)}
                         />
-                    </Card>
                     
                 )
         }

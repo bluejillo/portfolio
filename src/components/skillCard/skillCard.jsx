@@ -1,37 +1,44 @@
-import React from 'react';
-import DonutChart from 'react-d3-donut';
-import './skillCard.scss';
+import React, { Component } from 'react';
+import ReactCardFlip from 'react-card-flip';
+import SkillCardFront from './SkillCardFront/SkillCardFront';
+import SkillCardBack from './SkillCardBack/SkillCardBack';
+import './SkillCard.scss';
 
-const SkillCard = (props) => {
+class SkillCard extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            flipped : false
+        };
+    }
     
+
+    handleFlip = (e) => {
+        e.preventDefault();
+        this.setState(prevState => ({flipped: !prevState.flipped}));
+    }
+
+    render() {
         return(
             <div className="skill-card">
-                <div className="skill-card__header-bar">
-                    <h3>{ props.skill }</h3>
-                </div>
-                <div className="skill-card__donut-container">
-                    <DonutChart 
-                    innerRadius={30}
-                    outerRadius={40}
-                    transition={true}
-                    svgClass="skill-card__donut"
-                    pieClass={props.pieID}
-                    displayTooltip={false}
-                    strokeWidth={0}
-                    data={ props.donutData } />
-                </div>
-                <div className="skill-card__footer-bar">
-                    <button onClick={ () => props.descriptionClick(props.id)}>Skill info</button>
-                        {props.descriptionToggle &&
-                            <p>
-                                { props.description }
-                            </p>
-                            
-                        }
-                </div>
+                <ReactCardFlip isFlipped={this.state.flipped}>
+                    <div key="front">
+                        <SkillCardFront
+                            flipClick={this.handleFlip}
+                            pieID={this.props.pieID}
+                            donutData={this.props.donutData}
+                            skill={ this.props.skill }/>
+                    </div>
+                    <div key="back">
+                        <SkillCardBack 
+                        description={this.props.description}
+                        skill={this.props.skill}
+                        flipClick={this.handleFlip}/>
+                    </div>
+                </ReactCardFlip>
             </div>
         );
-
+    }
 }
 
 export default SkillCard;

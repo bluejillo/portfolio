@@ -1,0 +1,40 @@
+.skill-card-back {
+    height: auto;
+    margin: auto;
+    border-radius: unset;
+    background-color: #390164;
+
+    &__description-container {
+    	margin: auto;
+    	padding: 1rem;
+        color: white;
+        background-color: #390164;
+    }
+
+    &__header {
+    	padding-top: 10px;
+    	text-align: center;
+    	background-color: #390164;
+    	color: white;
+    	
+    }
+
+    &__button {
+    	background-color: #390164;
+    	color: white;
+    	border: none;
+    	height: 40px;
+        font-size: 24px;
+    	cursor: pointer;
+    }
+    &.ui.card>:first-child {
+    	border-radius: unset !important;
+    }
+    &.ui.card>:last-child {
+    	border-radius: unset !important;
+    }
+    &.ui.card {
+    	border-radius: unset !important;
+        background-color: #390164;
+    }
+}
